@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  console.log(getProducts());
   return (
     <html lang="en">
       <body className={font.className}>

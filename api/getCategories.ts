@@ -1,4 +1,4 @@
-import { Product } from "@/public/types";
+import { Category } from "@/public/types";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 

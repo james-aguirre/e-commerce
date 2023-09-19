@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Link from "next/link";
 import MainNav from "./Main-Nav";
+import NavbarActions from "./NavbarActions";
 
 const Navbar = () => {
   return (
@@ -11,6 +12,7 @@ const Navbar = () => {
             <p className="font-bold text-xl">STORE</p>
           </Link>
           <MainNav data={[]} />
+          <NavbarActions />
         </div>
       </Container>
     </div>
