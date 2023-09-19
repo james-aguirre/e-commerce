@@ -5,14 +5,10 @@ export interface Product {
   description?: string;
   image?: string;
   category: string;
+  is_featured?: boolean;
+  price?: number;
   //   metadata?: Stripe.Metadata;
 }
-
-export interface Image {
-  id: string;
-  url: string;
-}
-
 export interface Size {
   id: string;
   name: string;
