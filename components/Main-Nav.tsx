@@ -8,7 +8,7 @@ import { Category } from "@/types";
 interface MainNavProps {
   data: Category[];
 }
-
+//TODO: fix types category
 const MainNav: React.FC<MainNavProps> = ({ data }) => {
   const pathname = usePathname();
   const routes = data.map((route) => ({
