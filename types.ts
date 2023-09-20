@@ -3,19 +3,15 @@ export interface Product {
   active?: boolean;
   name?: string;
   description?: string;
-  image?: string;
+  image1?: string;
+  image2?: string;
   category: string;
   is_featured?: boolean;
   price?: number;
   //   metadata?: Stripe.Metadata;
 }
-export interface Size {
-  id: string;
-  name: string;
-  value: string;
-}
-export interface Color {
-  id: string;
-  name: string;
-  value: string;
+
+export interface Image {
+  id?: string;
+  src?: string;
 }

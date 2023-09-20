@@ -1,21 +1,27 @@
 "use client";
 
-import { Product } from "@/public/types";
+import { Product } from "@/types";
 import Image from "next/image";
 import IconButton from "./IconButton";
 import { Expand, ShoppingCart } from "lucide-react";
 import ToCurrency from "../toCurrency";
+import { useRouter } from "next/navigation";
 
 interface ProductCard {
   data: Product;
 }
 const ProductCard: React.FC<ProductCard> = ({ data }) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/products/${data?.id}`);
+  };
+
   return (
     <div className="group cursor-pointer rounded-xl border p-3 space-y-4 hover:scale-110">
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
           fill
-          src={data?.image!}
+          src={data?.image1!}
           alt={"image"}
           className="aspect-square object-cover rounded-md"
         />
@@ -23,7 +29,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
             <IconButton
-              onClick={() => {}}
+              onClick={handleClick}
               icon={<Expand size={20} className="text-gray-600" />}
             />
             <IconButton

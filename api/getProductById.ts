@@ -2,15 +2,14 @@ import { Product } from "@/types";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 
-const getFeatured = async (): Promise<Product[]> => {
+const getProductById = async (productId: string): Promise<Product[]> => {
   const supabase = createServerComponentClient({ cookies: cookies });
 
-  const { data, error } = await supabase
-    .from("products")
-    .select("*")
-    .eq("is_featured", true);
+  const { data, error } = await supabase.from("products").select("*").eq("id", productId);
+
   if (error) throw new Error(error.message);
+
   return (data as any) || [];
 };
 
-export default getFeatured;
+export default getProductById;

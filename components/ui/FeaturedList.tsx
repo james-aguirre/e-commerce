@@ -1,4 +1,4 @@
-import { Product } from "@/public/types";
+import { Product } from "@/types";
 import NoResults from "./NoResults";
 import ProductCard from "./ProductCard";
 
