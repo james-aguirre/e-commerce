@@ -7,7 +7,7 @@ interface GalleryTabProps {
   image: ImageType;
 }
 
-const GalleryTab = () => {
+const GalleryTab = ({ image }) => {
   return (
     <Tab
       className="relative flex aspect-square cursor-pointer
@@ -19,14 +19,19 @@ const GalleryTab = () => {
             className="absolute h-full w-full aspect-square 
             inset-0 overflow-hidden rounded-md"
           >
-            {/* <Image fill src={"http://www.fill.com/fsdaf"} alt="clothing" /> */}
+            <Image
+              fill
+              src={image.src}
+              alt="clothing"
+              className="object-cover object-center"
+            />
           </span>
           <span
             className={cn(
               "absolute inset-0 rounded-md ring-2 ring-offset-2",
               selected ? "ring-black" : "ring-transparent"
             )}
-          ></span>
+          />
         </div>
       )}
     </Tab>

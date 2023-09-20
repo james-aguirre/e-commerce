@@ -10,6 +10,9 @@ const nextConfig = {
       "static.zara.net",
       "lookagain.scene7.com",
       "www.ourlegends.co",
+      "i.ebayimg.com",
+      "www.allweathers.co.uk",
+      "media.karousell.com",
     ],
   },
 };
