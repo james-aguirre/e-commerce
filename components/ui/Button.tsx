@@ -8,7 +8,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
-        className={cn(`
+        className={cn(
+          `
         items-center 
         justify-center 
         inline-flex
@@ -27,7 +28,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         transition
         text-white
         font-semibold
-        `)}
+        `,
+          className
+        )}
       >
         {children}
       </button>

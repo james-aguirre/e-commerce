@@ -15,7 +15,7 @@ const NavbarActions = () => {
 
   return (
     <div className="ml-auto flex items-center gap-x-4">
-      <Button className="flex items-center rounded-full px-4 py-2">
+      <Button className="flex items-center">
         <ShoppingCart color="white" className="h-4 w-4" size={18} />
         <span
           className="text-sm text-white

@@ -4,8 +4,6 @@ import IconButton from "./ui/IconButton";
 import { Github } from "lucide-react";
 import Link from "next/link";
 
-// TODO: Add link to github icon, finish styling
-
 const Footer = () => {
   return (
     <footer className="bg-[#1B1F20] border-t">
