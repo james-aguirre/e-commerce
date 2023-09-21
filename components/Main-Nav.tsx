@@ -3,19 +3,25 @@
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Category } from "@/types";
+import { useMemo } from "react";
 
-interface MainNavProps {
-  data: Category[];
-}
-//TODO: fix types category
-const MainNav: React.FC<MainNavProps> = ({ data }) => {
+const MainNav = () => {
   const pathname = usePathname();
-  const routes = data.map((route) => ({
-    href: `/category/${route.id}`,
-    label: route.name,
-    active: pathname === `/category/${route.id}`,
-  }));
+  const routes = useMemo(
+    () => [
+      {
+        label: "Hoodies",
+        active: pathname === "/categories/hoodies",
+        href: "/categories/hoodies",
+      },
+      {
+        label: "T-shirts",
+        active: pathname === "/categories/t-shirts",
+        href: "/categories/t-shirts",
+      },
+    ],
+    [pathname]
+  );
   return (
     <nav className="mx-6 flex items-center space-x-4 lg:space-x-6">
       {routes.map((route) => (
@@ -23,7 +29,7 @@ const MainNav: React.FC<MainNavProps> = ({ data }) => {
           key={route.href}
           href={route.href}
           className={cn(
-            "text-sm font-medium transition-colors hover:text-white",
+            "text-md font-medium transition-colors hover:bg-gray-700 px-4 py-2 m-0 rounded-md",
             route.active ? "text-white" : "text-gray-300"
           )}
         >

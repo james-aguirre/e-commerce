@@ -3,7 +3,7 @@ import Link from "next/link";
 import MainNav from "./Main-Nav";
 import NavbarActions from "./NavbarActions";
 
-const Navbar = () => {
+const Navbar = async () => {
   return (
     <div className="border-b bg-[#1B1F20] text-white">
       <Container>
@@ -11,7 +11,7 @@ const Navbar = () => {
           <Link href="/" className="ml-4 flex lg:ml-0 gap-x-2">
             <p className="font-bold text-xl">STORE</p>
           </Link>
-          <MainNav data={[]} />
+          <MainNav />
           <NavbarActions />
         </div>
       </Container>
