@@ -13,7 +13,6 @@ interface ProductDetailsProps {
 
 const ProductDetails: React.FC<ProductDetailsProps> = async ({ params }) => {
   // TODO change hardcoded values to render dynamically
-  console.log(params);
   const data = await getProductById(params.productId);
   const productInfo = data[0];
   const suggestedProducts = await getCategoryById(params.productId);

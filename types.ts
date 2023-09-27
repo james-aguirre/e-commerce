@@ -3,8 +3,8 @@ export interface Product {
   active?: boolean;
   name?: string;
   description?: string;
-  image1?: string;
-  image2?: string;
+  image1: string;
+  image2: string;
   category: string;
   is_featured?: boolean;
   price?: number;
@@ -14,6 +14,6 @@ export interface Product {
 }
 
 export interface Image {
-  id?: string;
-  src?: string;
+  id: string;
+  src: string;
 }
