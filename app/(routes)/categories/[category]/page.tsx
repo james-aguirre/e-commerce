@@ -1,7 +1,9 @@
 import getItemsByCategory from "@/api/getItemsByCategory";
 import Container from "@/components/ui/Container";
-import Filter from "./components/filter";
+import Filter from "./components/Filter";
 import ProductCard from "@/components/ui/ProductCard";
+import NoResults from "@/components/ui/NoResults";
+import MobileFilter from "./components/MobileFilter";
 
 interface CategoryPageProps {
   params: {
@@ -26,12 +28,15 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({ params }) => {
             View our top quality selection of {params.category}
           </h1>
           <div className="lg:grid lg:grid-flow-row lg:gap-x-8">
-            {/* Add mobile filters */}
-            <div className="hidden lg:block">
+            <MobileFilter name="Size" data={products} />
+            <div className="hidden lg:flex gap-10 ">
               <Filter name="Size" data={products} />
+              <Filter name="Brand" data={products} />
             </div>
+
             <div className="mt-6 lg:col-span-4 lg:mt-0">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {products.length === 0 && <NoResults />}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {products.map((product) => (
                   <ProductCard key={product.id} data={product} />
                 ))}

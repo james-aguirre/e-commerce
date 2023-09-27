@@ -42,7 +42,7 @@ const Filter: React.FC<FilterProps> = ({ data, name }) => {
       <hr className="my-4" />
       <div className="flex flex-wrap gap-2">
         {data.map((filter) => (
-          <div key={filter.id} className="flex items-center">
+          <div key={filter.size} className="flex items-center">
             <Button
               className={cn(`rounded-md text-sm 
             text-grey-800 p-2
@@ -51,6 +51,7 @@ const Filter: React.FC<FilterProps> = ({ data, name }) => {
              hover:bg-gray-300
              border-gray-300 
              w-auto`)}
+              onClick={() => onClick(filter.size!)}
             >
               {filter.size}
             </Button>
