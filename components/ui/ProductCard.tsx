@@ -6,14 +6,30 @@ import IconButton from "./IconButton";
 import { Expand, ShoppingCart } from "lucide-react";
 import ToCurrency from "../toCurrency";
 import { useRouter } from "next/navigation";
+import { MouseEventHandler } from "react";
+import usePreviewModal from "@/hooks/UsePreviewModal";
+import useCart from "@/hooks/useCart";
 
 interface ProductCard {
   data: Product;
 }
 const ProductCard: React.FC<ProductCard> = ({ data }) => {
+  const previewModal = usePreviewModal();
+  const cart = useCart();
   const router = useRouter();
   const handleClick = () => {
-    router.push(`/products/${data?.id}`);
+    router.push(`/products/${data.id}`);
+  };
+
+  // Decided to not use the modal, as I believe the product details page is more aesthetically pleasing,
+  // leaving the code here for future reference in other projects
+  const onPreview: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.stopPropagation();
+    previewModal.onOpen(data);
+  };
+  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.stopPropagation();
+    cart.addItem(data);
   };
 
   return (
@@ -22,7 +38,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
         <Image
           fill
           src={data?.image1!}
-          alt={"image"}
+          alt={`A picture of ${data?.name}`}
           className="aspect-square object-cover rounded-md"
         />
 
@@ -33,13 +49,10 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
               icon={<Expand size={20} className="text-gray-600" />}
             />
             <IconButton
-              onClick={() => {}}
+              onClick={onAddToCart}
               icon={<ShoppingCart size={20} className="text-gray-600" />}
             />
           </div>
-          {/* <div className="font-bold text-xl">{data?.name}</div>
-        <div className="text-gray-500">{data?.description}</div>
-        <div className="text-gray-500">{data?.price}</div> */}
         </div>
       </div>
       <div>
