@@ -7,6 +7,10 @@ interface CategoryPageProps {
   params: {
     category: string;
   };
+  searchParams: {
+    brand: string;
+    size: string;
+  };
 }
 
 export const revalidate = 0;
@@ -24,7 +28,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({ params }) => {
           <div className="lg:grid lg:grid-flow-row lg:gap-x-8">
             {/* Add mobile filters */}
             <div className="hidden lg:block">
-              {/* <Filter valueKey="sizeId" name="sizes" data={size} /> */}
+              <Filter name="Size" data={products} />
             </div>
             <div className="mt-6 lg:col-span-4 lg:mt-0">
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

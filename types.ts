@@ -8,6 +8,8 @@ export interface Product {
   category: string;
   is_featured?: boolean;
   price?: number;
+  size?: string;
+  brand?: string;
   //   metadata?: Stripe.Metadata;
 }
 
