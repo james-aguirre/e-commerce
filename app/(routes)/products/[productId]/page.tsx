@@ -1,5 +1,5 @@
-import getCategoryById from "@/api/getCategoryById";
-import getProductById from "@/api/getProductById";
+import getCategoryById from "@/actions/getCategoryById";
+import getProductById from "@/actions/getProductById";
 import Gallery from "@/components/gallery";
 import Container from "@/components/ui/Container";
 import FeaturedList from "@/components/ui/FeaturedList";

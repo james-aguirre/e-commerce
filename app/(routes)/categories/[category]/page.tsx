@@ -1,4 +1,4 @@
-import getItemsByCategory from "@/api/getItemsByCategory";
+import getItemsByCategory from "@/actions/getItemsByCategory";
 import Container from "@/components/ui/Container";
 import Filter from "./components/Filter";
 import ProductCard from "@/components/ui/ProductCard";

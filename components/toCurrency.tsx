@@ -4,7 +4,7 @@ import { toUSD } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 interface ToCurrencyProps {
-  value?: string | number;
+  value: string | number;
 }
 const ToCurrency: React.FC<ToCurrencyProps> = ({ value }) => {
   const [isMounted, setIsMounted] = useState(false);
