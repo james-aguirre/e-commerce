@@ -33,7 +33,7 @@ const Summary = () => {
 
   const onCheckout = async () => {
     const res = await axios.post("/api/checkout_sessions", {
-      productsIds: items.map((item) => item.id),
+      productData: items.map((item) => item.name),
     });
     window.location = res.data.url;
   };
