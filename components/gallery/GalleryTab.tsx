@@ -7,7 +7,7 @@ interface GalleryTabProps {
   image: ImageType;
 }
 
-const GalleryTab = ({ image }) => {
+const GalleryTab = ({ image }: GalleryTabProps) => {
   return (
     <Tab
       className="relative flex aspect-square cursor-pointer
