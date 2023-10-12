@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
     router.push(`/products/${data.id}`);
   };
 
-  // Decided to not use the modal, as I believe the product details page is more aesthetically pleasing,
+  // Decided to not use the modal, in favor of a new page,
   // leaving the code here for future reference in other projects
   const onPreview: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.stopPropagation();
@@ -41,7 +41,6 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
           alt={`A picture of ${data?.name}`}
           className="aspect-square object-cover rounded-md"
         />
-
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
             <IconButton

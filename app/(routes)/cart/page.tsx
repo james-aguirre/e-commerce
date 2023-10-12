@@ -17,7 +17,7 @@ const CartPage = () => {
   if (!isMounted) return null;
 
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-[85vh]">
       <Container>
         <div className="px-4 py-16 sm:px-6 lg:px-8">
           <h1 className="font-bold text-3xl">Your Cart</h1>
