@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { toast } from "react-hot-toast";
-import { Currency, X } from "lucide-react";
+import { X } from "lucide-react";
 import useCart from "@/hooks/useCart";
 import IconButton from "@/components/ui/IconButton";
 import ToCurrency from "@/components/toCurrency";
@@ -12,7 +11,7 @@ interface CartItemProps {
   data: Product;
 }
 
-const CartItem = ({ data }) => {
+const CartItem = ({ data }: CartItemProps) => {
   const cart = useCart();
 
   const onRemove = () => {
