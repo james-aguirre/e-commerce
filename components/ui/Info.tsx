@@ -1,6 +1,10 @@
+"use client";
+
 import { Product } from "@/types";
 import ToCurrency from "../toCurrency";
 import Button from "./Button";
+import { MouseEventHandler } from "react";
+import useCart from "@/hooks/useCart";
 
 interface InfoProps {
   data: Product;
@@ -9,6 +13,11 @@ interface InfoProps {
 // TODO: add a quantity button for add to cart
 
 const Info: React.FC<InfoProps> = ({ data }) => {
+  const cart = useCart();
+  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.stopPropagation();
+    cart.addItem(data);
+  };
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>

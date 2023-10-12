@@ -11,6 +11,10 @@ export const toUSD = new Intl.NumberFormat("en-US", {
   currency: "USD",
 });
 
+export const toNumber = new Intl.NumberFormat("en-US", {
+  style: "decimal",
+});
+
 let stripePromise: Promise<Stripe | null>;
 export const getStripe = () => {
   if (!stripePromise) {
