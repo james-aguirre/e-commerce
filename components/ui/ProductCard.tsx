@@ -39,6 +39,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
           fill
           src={data?.image1!}
           alt={`A picture of ${data?.name}`}
+          onClick={handleClick}
           className="aspect-square object-cover rounded-md"
         />
         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">

@@ -1,6 +1,5 @@
 import Billboard from "@/components/Billboard";
 import Container from "@/components/ui/Container";
-import getProducts from "@/actions/getProducts";
 import getFeatured from "@/actions/getFeatured";
 import FeaturedList from "@/components/ui/FeaturedList";
 
