@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Product } from "@/types";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
 interface FilterProps {
   data: Product[];
@@ -13,9 +14,18 @@ interface FilterProps {
 const Filter: React.FC<FilterProps> = ({ data, name }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const [products, setProducts] = useState<Product[]>([]);
+  const [filter, setFilter] = useState("");
+
+  useEffect(() => {
+    try {
+      setProducts(data);
+    } catch (e) {
+      console.log(e);
+    }
+  }, [data]);
 
   const selectedValue = searchParams.get(name);
-
   const onClick = (id: string) => {
     const current = qs.parse(searchParams.toString());
     const query = {
@@ -36,13 +46,16 @@ const Filter: React.FC<FilterProps> = ({ data, name }) => {
     );
     router.push(url);
   };
+
+  let filteredProducts = products.filter((product) => p.productName.toLowerCase());
+  console.log(data);
   return (
     <div className="mb-8">
       <h3 className="text-lg font-semibold mb-2">{name}</h3>
       <hr className="my-4" />
       <div className="flex flex-wrap gap-2">
         {data.map((filter) => (
-          <div key={filter.size} className="flex items-center">
+          <div key={filter.brand} className="flex items-center">
             <Button
               className={cn(`rounded-md text-sm 
             text-grey-800 p-2
@@ -51,9 +64,9 @@ const Filter: React.FC<FilterProps> = ({ data, name }) => {
              hover:bg-gray-300
              border-gray-300 
              w-auto`)}
-              onClick={() => onClick(filter.size!)}
+              onClick={() => onClick(filter.brand!)}
             >
-              {filter.size}
+              {filter.brand}
             </Button>
           </div>
         ))}

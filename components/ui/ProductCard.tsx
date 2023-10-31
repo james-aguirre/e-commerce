@@ -42,6 +42,14 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
           onClick={handleClick}
           className="aspect-square object-cover rounded-md"
         />
+        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
+          <div className="flex gap-x-6 justify-center">
+            <IconButton
+              onClick={handleClick}
+              icon={<Expand size={20} className="text-gray-600" />}
+            />
+          </div>
+        </div>
       </div>
       <div>
         <p className="font-semibold text-lg">{data.name}</p>
@@ -52,7 +60,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
       </div>
       <button
         onClick={onAddToCart}
-        className="bg-[#1B1F20] text-white text-center w-10/12 display-flex justify-between font-semibold py-2 px-4 border border-white rounded shadow"
+        className="bg-[#1B1F20] text-white text-center w-11/12 display-flex justify-between font-semibold py-2 px-4 border border-white rounded shadow"
       >
         Add to cart
       </button>

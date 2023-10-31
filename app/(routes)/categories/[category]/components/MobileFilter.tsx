@@ -35,7 +35,6 @@ const MobileFilter: React.FC<MobileFilterProps> = ({ data, name }) => {
       </Button>
       <Dialog open={open} onClose={onClose} className="relative z-40 lg:hidden">
         <div className="fixed inset-0 bg-black bg-opacity-50" />
-
         <div className="fixed inset-0 z-40 flex">
           <Dialog.Panel
             className="relative ml-auto flex h-full w-full 
@@ -44,7 +43,6 @@ const MobileFilter: React.FC<MobileFilterProps> = ({ data, name }) => {
             <div className="flex items-center justify-end px-4">
               <IconButton icon={<X size={15} onClick={onClose} />} />
             </div>
-
             <div className="p-4">
               <Filter name="Size" data={data} />
               <Filter name="Brand" data={data} />
