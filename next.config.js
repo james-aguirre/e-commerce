@@ -17,6 +17,7 @@ const nextConfig = {
       "https://u-mercari-images.mercdn.net",
       "purple-brand.com",
       "i.etsystatic.com",
+      "image.uniqlo.com",
     ],
   },
 };

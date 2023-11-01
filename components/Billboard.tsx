@@ -1,12 +1,24 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { MouseEventHandler } from "react";
+
 const Billboard = () => {
+  const router = useRouter();
+  const handleClick: MouseEventHandler<HTMLDivElement> = () => {
+    router.push("/products/13");
+  };
+
   return (
     <div className="max">
       <h1 className="text-2xl sm:text-3xl md:text-4xl mt-6 font-bold ml-5">
-        Checkout our new fall releases!
+        Now Featuring Uniqlo!
       </h1>
       <div className="p-4 sm:p-6 lg:p-6 rounded-xl overflow-hidden">
         <div
+          onClick={handleClick}
           className="
+      cursor-pointer
       rounded-xl 
       relative 
       aspect-square 
@@ -20,13 +32,13 @@ const Billboard = () => {
           }}
         >
           <div
-            className="h-full w-full flex flex-col justify-center items-center
+            className="h-full w-full flex flex-col justify-end pb-8 items-center
         text-center gap-y-8
         "
           >
-            {/* <div className="font-bold text-5xl sm:text-4xl lg:text-5xl sm:max-w-xl max-w-xs text-white">
-              Mega Sale!
-            </div> */}
+            {/* <button className="font-bold text-4xl sm:text-3xl lg:text-4xl sm:max-w-xl max-w-xs text-white bg-red-600 px-3 rounded py-2">
+              Shop now!
+            </button> */}
           </div>
         </div>
       </div>
