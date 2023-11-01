@@ -15,7 +15,7 @@ const HomePage = async () => {
       <div className="space-y-10 pb-10">
         <Billboard />
         <div className="flex flex-col gap-y-8 px-4 sm:px-6 lg:pg-8">
-          <FeaturedList title="Checkout Our New Fall Releases" items={newItems} />
+          <FeaturedList title="New Fall Releases" items={newItems} />
           <FeaturedList title="Featured Products" items={featured} />
         </div>
       </div>

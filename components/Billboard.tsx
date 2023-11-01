@@ -11,9 +11,7 @@ const Billboard = () => {
 
   return (
     <div className="max">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl mt-6 font-bold ml-5">
-        Now Featuring Uniqlo!
-      </h1>
+      <h1 className="text-3xl md:text-4xl mt-6 font-bold ml-5">Now Featuring Uniqlo!</h1>
       <div className="p-4 sm:p-6 lg:p-6 rounded-xl overflow-hidden">
         <div
           onClick={handleClick}
