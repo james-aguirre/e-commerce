@@ -1,9 +1,7 @@
 import getItemsByCategory from "@/actions/getItemsByCategory";
 import Container from "@/components/ui/Container";
-import Filter from "./components/Filter";
 import ProductCard from "@/components/ui/ProductCard";
 import NoResults from "@/components/ui/NoResults";
-import MobileFilter from "./components/MobileFilter";
 
 interface CategoryPageProps {
   params: {
