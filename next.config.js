@@ -13,6 +13,7 @@ const nextConfig = {
       "i.ebayimg.com",
       "www.allweathers.co.uk",
       "media.karousell.com",
+      "https://static.vecteezy.com",
     ],
   },
 };

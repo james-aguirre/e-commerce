@@ -12,7 +12,7 @@ const Billboard = () => {
       h-full
       w-full"
         style={{
-          backgroundImage: `url(https://www.teamspiritstoreusa.com/cdn/shop/collections/men-fashion-banner-2.png?v=1647143798)`,
+          backgroundImage: `url(https://static.vecteezy.com/system/resources/previews/025/940/927/original/set-of-four-black-and-white-street-fashion-men-illustration-young-man-in-a-fashionable-clothes-military-style-90s-2000s-in-full-growth-posing-vector.jpg)`,
         }}
       >
         <div

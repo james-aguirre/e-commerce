@@ -47,7 +47,7 @@ const Filter: React.FC<FilterProps> = ({ data, name }) => {
     router.push(url);
   };
 
-  let filteredProducts = products.filter((product) => p.productName.toLowerCase());
+  let filteredProducts = products.filter((p) => p.name.toLowerCase());
   console.log(data);
   return (
     <div className="mb-8">

@@ -37,7 +37,6 @@ const CartItem = ({ data }: CartItemProps) => {
           </div>
           <div className="mt-1 flex text-sm text-black">
             <p>{data.brand}</p>
-            <p className="ml-4 border-1 border-gray-200 pl-4">{data.size}</p>
           </div>
           <ToCurrency value={data.price} />
         </div>
