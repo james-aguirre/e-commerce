@@ -14,6 +14,7 @@ const nextConfig = {
       "www.allweathers.co.uk",
       "media.karousell.com",
       "https://static.vecteezy.com",
+      "https://u-mercari-images.mercdn.net",
     ],
   },
 };

@@ -12,7 +12,7 @@ const Billboard = () => {
       h-full
       w-full"
         style={{
-          backgroundImage: `url(https://static.vecteezy.com/system/resources/previews/025/940/927/original/set-of-four-black-and-white-street-fashion-men-illustration-young-man-in-a-fashionable-clothes-military-style-90s-2000s-in-full-growth-posing-vector.jpg)`,
+          backgroundImage: `url(https://thumbs.dreamstime.com/b/manhattan-brooklyn-bridge-black-white-new-york-skyscrapers-city-illuminations-colors-usa-65168874.jpg)`,
         }}
       >
         <div
