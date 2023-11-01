@@ -15,6 +15,8 @@ const nextConfig = {
       "media.karousell.com",
       "https://static.vecteezy.com",
       "https://u-mercari-images.mercdn.net",
+      "purple-brand.com",
+      "i.etsystatic.com",
     ],
   },
 };

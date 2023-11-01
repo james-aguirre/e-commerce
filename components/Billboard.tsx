@@ -16,7 +16,7 @@ const Billboard = () => {
       h-full
       w-full"
           style={{
-            backgroundImage: `url(https://realmoney.thestreet.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cq_auto:good%2Cw_1200/MTk1NzgyNDM4NTY2NzAxMDUw/the-stock-behind-vans-and-the-north-face-looks-ill-fitting.png)`,
+            backgroundImage: `url(https://www.shopriteholdings.co.za/newsroom/2023/uniq-store-launch/_jcr_content/root/container/container_623787083/container_146590027/image_copy_455952545_1299909073.coreimg.90.1900.jpeg/1684325312785/uniq-launch-b.jpeg)`,
           }}
         >
           <div
@@ -24,9 +24,9 @@ const Billboard = () => {
         text-center gap-y-8
         "
           >
-            {/* <div className="font-bold text-3xl sm:text-4xl lg:text-5xl sm:max-w-xl max-w-xs text-white">
-            Mega Sale!
-          </div> */}
+            {/* <div className="font-bold text-5xl sm:text-4xl lg:text-5xl sm:max-w-xl max-w-xs text-white">
+              Mega Sale!
+            </div> */}
           </div>
         </div>
       </div>
