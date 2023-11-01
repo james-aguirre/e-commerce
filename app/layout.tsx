@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={font.className} style={{ backgroundColor: "#1B1F20" }}>
+      <body className={font.className}>
         <ModalProvider />
         <ToastProvider />
         <Navbar />

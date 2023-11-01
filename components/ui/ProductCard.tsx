@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
   };
 
   return (
-    <div className="group cursor-pointer rounded-xl border p-3 space-y-4 hover:scale-110">
+    <div className="group cursor-pointer rounded-xl border p-3 space-y-4">
       <div className="aspect-square rounded-xl bg-gray-100 relative">
         <Image
           fill
