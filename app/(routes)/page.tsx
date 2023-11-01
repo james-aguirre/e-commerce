@@ -7,9 +7,7 @@ import getNew from "@/actions/getNew";
 export const revalidate = 0;
 
 const HomePage = async () => {
-  const featured = await getFeatured();
-  const newItems = await getNew();
-
+  const [featured, newItems] = await Promise.all([getFeatured(), getNew()]);
   return (
     <Container>
       <div className="space-y-10 pb-10">
