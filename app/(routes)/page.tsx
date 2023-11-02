@@ -4,6 +4,7 @@ import getFeatured from "@/actions/getFeatured";
 import FeaturedList from "@/components/ui/FeaturedList";
 import getNew from "@/actions/getNew";
 
+// nextjs feature to revalidate data on the server and clear cache as needed
 export const revalidate = 0;
 
 const HomePage = async () => {
