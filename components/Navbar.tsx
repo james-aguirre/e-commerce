@@ -1,7 +1,7 @@
 import Container from "@/components/ui/Container";
 import Link from "next/link";
-import MainNav from "./Main-Nav";
-import NavbarActions from "./NavbarActions";
+import MainNav from "./MainNav";
+import NavbarActions from "./RightSideNav";
 
 const Navbar = async () => {
   return (
