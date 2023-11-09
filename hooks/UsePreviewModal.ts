@@ -1,6 +1,8 @@
 import { create } from "zustand";
 import { Product } from "@/types";
 
+//This component is not used in this project, but am keeping it here for future reference in other projects.
+
 interface PreviewModalStore {
   isOpen: boolean;
   data?: Product;
