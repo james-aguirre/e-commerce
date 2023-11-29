@@ -7,7 +7,6 @@ const getItemsByBrand = async (
   category: string
 ): Promise<Product[]> => {
   const supabase = createServerComponentClient({ cookies: cookies });
-
   const { data, error } = await supabase
     .from("products")
     .select("*")
