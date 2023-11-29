@@ -9,7 +9,6 @@ const getItemsByCategory = async (
   param?: string
 ): Promise<Product[]> => {
   const supabase = createServerComponentClient({ cookies: cookies });
-
   // TODO: add another case to filter by size
   if (param) {
     const { data, error } = await supabase
@@ -19,7 +18,6 @@ const getItemsByCategory = async (
       .eq("size", param);
 
     if (error) throw new Error(error.message);
-
     return (data as any) || [];
   } else {
     const { data, error } = await supabase
@@ -28,7 +26,6 @@ const getItemsByCategory = async (
       .eq("category", category);
 
     if (error) throw new Error(error.message);
-
     return (data as any) || [];
   }
 };
