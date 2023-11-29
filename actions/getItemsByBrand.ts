@@ -13,9 +13,7 @@ const getItemsByBrand = async (
     .select("*")
     .eq("brand", productBrand)
     .eq("category", category);
-
   if (error) throw new Error(error.message);
-
   return (data as any) || [];
 };
 
