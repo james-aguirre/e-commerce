@@ -12,11 +12,11 @@ interface CategoryPageProps {
     size: string;
   };
 }
-
 export const revalidate = 0;
 
 const CategoryPage: React.FC<CategoryPageProps> = async ({ params }) => {
   const products = await getItemsByCategory(params.category);
+
   return (
     <div className="bg-white">
       <Container>
