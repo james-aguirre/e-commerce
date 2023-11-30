@@ -16,7 +16,6 @@ const getItemsByCategory = async (
       .select("*")
       .eq("category", category)
       .eq("size", param);
-
     if (error) throw new Error(error.message);
     return (data as any) || [];
   } else {
@@ -24,7 +23,6 @@ const getItemsByCategory = async (
       .from("products")
       .select("*")
       .eq("category", category);
-
     if (error) throw new Error(error.message);
     return (data as any) || [];
   }

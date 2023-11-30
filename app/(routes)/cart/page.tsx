@@ -13,9 +13,7 @@ const CartPage = () => {
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
   if (!isMounted) return null;
-
   return (
     <div className="bg-white min-h-[90vh]">
       <Container>
