@@ -8,7 +8,9 @@ const getFeatured = async (): Promise<Product[]> => {
     .from("products")
     .select("*")
     .eq("is_featured", true);
-  if (error) throw new Error(error.message);
+  if (error) {
+    throw new Error(error.message);
+  }
   return (data as any) || [];
 };
 

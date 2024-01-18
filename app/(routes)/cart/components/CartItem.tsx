@@ -13,7 +13,6 @@ interface CartItemProps {
 
 const CartItem = ({ data }: CartItemProps) => {
   const cart = useCart();
-
   const onRemove = () => {
     cart.removeItem(data.id);
   };
